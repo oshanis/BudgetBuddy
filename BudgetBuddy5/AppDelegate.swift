@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import MapKit
+
+
+var events = [Event]()
+var locations = [Location]()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +21,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        println("app init")
+        seedData()
         return true
     }
 
+    func seedData() {
+        var newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.979091, longitude: -118.444000), locationName : "Bar1", poiType : Poi.Bar)
+        locations.append(newLocation)
+        var newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-04"), amountSpent : 1000)
+        events.append(newEvent)
+
+        newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.989091, longitude: -118.454111), locationName : "Cafe1", poiType : Poi.Cafe)
+        locations.append(newLocation)
+        newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-05"), amountSpent : 100)
+        events.append(newEvent)
+
+        newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.989091, longitude: -118.446120), locationName : "DepartmentStore1", poiType : Poi.DepartmentStore)
+        locations.append(newLocation)
+        newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-06"), amountSpent : 800)
+        events.append(newEvent)
+
+        newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.989091, longitude: -118.494227), locationName : "BizHaus", poiType : Poi.Mall)
+        locations.append(newLocation)
+        newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-07"), amountSpent : 900)
+        events.append(newEvent)
+
+        newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.981091, longitude: -118.423927), locationName : "BizHaus", poiType : Poi.NightClub)
+        locations.append(newLocation)
+        newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-08"), amountSpent : 1500)
+        events.append(newEvent)
+
+        newLocation = Location(location : CLLocationCoordinate2D(latitude: 33.908991, longitude: -118.454187), locationName : "BizHaus", poiType : Poi.Restaurant)
+        locations.append(newLocation)
+        newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-08"), amountSpent : 100)
+        events.append(newEvent)
+       
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
