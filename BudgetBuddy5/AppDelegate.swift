@@ -9,9 +9,14 @@
 import UIKit
 import MapKit
 
+//Evil Global Vars -- only for demo purposes :)
 
 var events = [Event]()
 var locations = [Location]()
+var initialValues = [Tags.Eating : 2000, Tags.Drinking: 500, Tags.Shopping : 3000]
+var remainingValues = [Tags.Eating : 1800, Tags.Drinking: 0, Tags.Shopping : 1300]
+var dates = [Tags.StartDateTime: NSDate(timeIntervalSinceNow: 0),
+    Tags.EndDateTime: NSDate(timeIntervalSinceNow: 60*60*24*30)]
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -56,7 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locations.append(newLocation)
         newEvent = Event(location: newLocation, dateTime : NSDate(dateString:"2015-08-08"), amountSpent : 100)
         events.append(newEvent)
-       
     }
     
     func applicationWillResignActive(application: UIApplication) {

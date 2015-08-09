@@ -13,7 +13,6 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    
     override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
@@ -31,21 +30,34 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
             mapView.setRegion(coordinateRegion, animated: true)
-            
         
         for location in locations{
-            var amount = 0
+            var purpose : Tags
+            switch location.poiType{
+            case Poi.Bar, Poi.NightClub:
+                purpose = Tags.Drinking
+            case Poi.Cafe, Poi.Restaurant:
+                purpose = Tags.Eating
+            case Poi.DepartmentStore, Poi.Mall:
+                purpose = Tags.Shopping
+            }
+            
+            var amountSpent = 0
             var datesVisited = [NSDate()]
             for event in events{
                 if (event.location.location.latitude == location.location.latitude) &&
                     (event.location.location.longitude == location.location.longitude){
-                    amount += event.amountSpent
+                    amountSpent += event.amountSpent
                     datesVisited.append(event.dateTime)
                 }
             }
             let annotation = MKPointAnnotation()
-            annotation.title = "\(location.locationName): spent $450 for Drinking"
-            annotation.subtitle = "Remaining $50 till 2015-09-08."
+            annotation.title = "\(location.locationName): spent $\(amountSpent) for \(purpose.rawValue)"
+            var remaining = initialValues[purpose]! - amountSpent
+            if remaining < 0 {
+                remaining = 0
+            }
+            annotation.subtitle = "Remaining $\(remaining) till \(dates[Tags.EndDateTime]!)."
             annotation.coordinate = location.location
             
             self.mapView.addAnnotation(annotation)

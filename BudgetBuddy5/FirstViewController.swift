@@ -10,21 +10,6 @@ import UIKit
 
 class FirstViewController: XLFormViewController {
     
-    enum Tags : String {
-        case Eating = "eating"
-        case Drinking = "drinking"
-        case Shopping = "shopping"
-        case StartDateTime = "start"
-        case EndDateTime = "end"
-    }
-    
-    var initialValues = [Tags.Eating : 2000, Tags.Drinking: 500, Tags.Shopping : 3000]
-    
-    var remainingValues = [Tags.Eating : 100, Tags.Drinking: 50, Tags.Shopping : 1000]
-
-    var dates = [Tags.StartDateTime: NSDate(timeIntervalSinceNow: 0),
-                 Tags.EndDateTime: NSDate(timeIntervalSinceNow: 60*60*24*30)]
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.initializeForm()
