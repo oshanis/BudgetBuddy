@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7F42B053-0EF4-4E27-BB37-E55F8AF94EB3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BudgetBuddy5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2BA6DF643566275C223662A9E1A1CAC2FDD6B509</key>
+		<string>http://github.com/rlankfo/BudgetBuddy.git</string>
+		<key>58396C6E7D3AA6C387AF0020D1F9DA4BEDA0CD5D</key>
+		<string>https://github.com/oshanis/BudgetBuddy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BudgetBuddy5.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2BA6DF643566275C223662A9E1A1CAC2FDD6B509</key>
+		<string>../../BudgetBuddy</string>
+		<key>58396C6E7D3AA6C387AF0020D1F9DA4BEDA0CD5D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/oshanis/BudgetBuddy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>58396C6E7D3AA6C387AF0020D1F9DA4BEDA0CD5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2BA6DF643566275C223662A9E1A1CAC2FDD6B509</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BudgetBuddy</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>58396C6E7D3AA6C387AF0020D1F9DA4BEDA0CD5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BudgetBuddy5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
